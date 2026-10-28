@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/image_course"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="hình ảnh đặt vé và đăng kí khóa học"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/tilte"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Chuyên Đề Lập Trình Android Native Chuyên Sâu: Kiến Trúc Clean Architecture &amp; Jetpack 2026"
+            android:textSize="20sp"
+            android:textColor="@color/color_text_title"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="3.500.000 VNĐ"
+            android:textSize="18sp"
+            android:textColor="@color/color_text_body"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Thời lượng: 12 buổi (36 giờ học)"
+            android:textSize="13sp"
+            android:textColor="@color/color_text_body" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/nameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:hint="Nhập họ và tên học viên"
+                android:inputType="textCapWords"
+                android:imeOptions="actionNext" />
+
+            <EditText
+                android:id="@+id/emailInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="14dp"
+                android:hint="Nhập email nhận vé điện tử"
+                android:inputType="textEmailAddress"
+                android:imeOptions="actionNext" />
+
+            <EditText
+                android:id="@+id/phoneInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="14dp"
+                android:hint="Số điện thoại liên hệ"
+                android:inputType="phone"
+                android:imeOptions="actionDone" />
+
+            <RadioGroup
+                android:id="@+id/timeRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:checkedButton="@+id/time_morning">
+
+                <RadioButton
+                    android:id="@+id/time_morning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ca Sáng (08:30 - 11:30)" />
+
+                <RadioButton
+                    android:id="@+id/time_afternoon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ca Chiều (14:00 - 17:00)" />
+
+                <RadioButton
+                    android:id="@+id/time_evening"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ca Tối (18:30 - 21:30)" />
+            </RadioGroup>
+
+            <CheckBox
+                android:id="@+id/checkbox_in_class"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nhận giáo trình bìa cứng in màu tại lớp (+150.000đ)" />
+
+            <CheckBox
+                android:id="@+id/checkbox_consult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gói cố vấn nghề nghiệp 1-1 với Senior Engineer (+500.000đ)" />
+
+            <CheckBox
+                android:id="@+id/checkbox_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text = "Tôi cam kết tham gia đầy đủ các buổi học và tuân thủ nội quy đào tạo"
+                android:textSize="13sp"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="16dp"
+                android:text="XÁC NHẬN ĐẶT CHỖ &amp; THANH TOÁN"
+                android:backgroundTint="@color/color_primary"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
