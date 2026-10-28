@@ -73,7 +73,7 @@
                 android:padding="14dp"
                 android:hint="Nhập họ và tên học viên"
                 android:inputType="textCapWords"
-                android:imeOptions="actionNext" />
+                android:imeOptions="actionNext|flagNoExtractUi" />
 
             <EditText
                 android:id="@+id/emailInput"
@@ -83,7 +83,7 @@
                 android:padding="14dp"
                 android:hint="Nhập email nhận vé điện tử"
                 android:inputType="textEmailAddress"
-                android:imeOptions="actionNext" />
+                android:imeOptions="actionNext|flagNoExtractUi" />
 
             <EditText
                 android:id="@+id/phoneInput"
@@ -93,7 +93,7 @@
                 android:padding="14dp"
                 android:hint="Số điện thoại liên hệ"
                 android:inputType="phone"
-                android:imeOptions="actionDone" />
+                android:imeOptions="actionDone|flagNoExtractUi" />
 
             <RadioGroup
                 android:id="@+id/timeRadioGroup"
